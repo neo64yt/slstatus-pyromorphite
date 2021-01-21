@@ -23,7 +23,7 @@ static const char unknown_str[] = "n/a";
  * datetime            date and time                   format string (%F %T)
  * disk_free           free disk space in GB           mountpoint path (/)
  * disk_perc           disk usage in percent           mountpoint path (/)
- * disk_total          total disk space in GB          mountpoint path (/")
+ * disk_total          total disk space in GB          mountpoint path (/)
  * disk_used           used disk space in GB           mountpoint path (/)
  * entropy             available entropy               NULL
  * gid                 GID of current user             NULL
@@ -63,7 +63,28 @@ static const char unknown_str[] = "n/a";
  * wifi_perc           WiFi signal in percent          interface name (wlan0)
  * wifi_essid          WiFi ESSID                      interface name (wlan0)
  */
+
+/* NOTE: The ";" separator used below is intended to be used with my specific build of dwm or dwm with extrabar patch. */
 static const struct arg args[] = {
-	/* function format          argument */
-	{ datetime, "%s",           "%F %T" },
+	/* function                   format                                                               argument */
+	/* first bar */
+	{ keymap,                     " [󰌌 %s]",                                                           NULL                                        },
+	{ username,                   " [󰀓 %s]",                                                           NULL                                        },
+	/* status separator */
+	{ separator,                  " %s",                                                               ";"                                         },
+	/* second bar (left part) */
+	{ hostname,                   " [󰌢 %s]",                                                           NULL                                        },
+	{ kernel_release,             " [󰌽 %s]",                                                           NULL                                        },
+	{ cpu_perc,                   " [󰘚 %s%%]",                                                         NULL                                        },
+	{ temp,                       " [󰔏 %s C]",                                                         "/sys/class/thermal/thermal_zone0/temp"     },
+	{ ram_perc,                   " [󰍛 %s%%]",                                                         NULL                                        },
+	/* second bar center */
+	{ separator,                  " %s",                                                               "                  "                        },
+	/* second bar (right part) */
+	{ disk_perc,                  " [󰋊 %s%%]",                                                         "/"                                         },
+	{ run_command,                " [󰏗 %s]",                                                           "pacman -Qqe | wc -l"                       },
+	{ wifi_perc,                  " [󰤯 %s%%]",                                                         "wlp2s0"                                    },
+	{ battery_perc,               " [󰂎 %s%%]",                                                         "BAT1"                                      },  
+	{ datetime,                   " [%s]",                                                             "󰸗 %a %d/%m/%y] [󰅐 %R"                      },
+        /* EOF */
 };
