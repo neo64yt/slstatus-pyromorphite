@@ -79,7 +79,7 @@ static const struct arg args[] = {
 	{ temp,                       " [󰔏 %s C]",                                                         "/sys/class/thermal/thermal_zone0/temp"     },
 	{ ram_perc,                   " [󰍛 %s%%]",                                                         NULL                                        },
 	/* second bar center */
-	{ separator,                  " %s",                                                               "                  "                        },
+	{ separator,                  " %s",                                                               "                "                          },
 	/* second bar (right part) */
 	{ disk_perc,                  " [󰋊 %s%%]",                                                         "/"                                         },
 	{ run_command,                " [󰏗 %s]",                                                           "pacman -Qqe | wc -l"                       },
