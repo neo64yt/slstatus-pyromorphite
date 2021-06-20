@@ -68,19 +68,19 @@ static const char unknown_str[] = "n/a";
 static const struct arg args[] = {
 	/* function                   format                       argument */
 	/*                            first bar                                                                */
-	{ username,                   " [󰀓 %s]",                   NULL                                        },
+	{ username,                   "󰇝 󰀓 %s 󰇝",                 NULL                                        },
 	/*                            status separator                                                         */
 	{ separator,                  " %s",                       ";"                                         },
 	/*                            second bar (left part)                                                   */
-	{ hostname,                   " [󰌢 %s]",                   NULL                                        },
-	{ kernel_release,             " [󰌽 %s]",                   NULL                                        },
-	{ cpu_perc,                   " [󰘚 %3s%%]",                NULL                                        },
-	{ temp,                       " [󰔏 %2s C]",                "/sys/class/thermal/thermal_zone0/temp"     },
-	{ ram_perc,                   " [󰍛 %3s%%]",                NULL                                        },
+	{ hostname,                   "󰇝 󰌢 %s ",                   NULL                                        },
+	{ kernel_release,             "󰇝 󰌽 %s ",                   NULL                                        },
+	{ cpu_perc,                   "󰇝 󰘚 %3s%% ",                NULL                                        },
+	{ temp,                       "󰇝 󰔏 %2s C ",                "/sys/class/thermal/thermal_zone0/temp"     },
+	{ ram_perc,                   "󰇝 󰍛 %3s%% ",                NULL                                        },
 	/*                            second bar (right part)                                                  */
-	{ disk_perc,                  " [󰋊 %2s%%]",                "/"                                         },
-	{ run_command,                " [󰏗 %s]",                   "pacman -Qqe | wc -l"                       },
-	{ battery_perc,               " [󰂎 %3s%%]",                "BAT1"                                      },  
-	{ datetime,                   " [%s]",                     "󰸗 %a %d/%m/%y] [󰅐 %R"                      },
+	{ disk_perc,                  "󰇝 󰋊 %2s%% ",                "/"                                         },
+	{ run_command,                "󰇝 󰏗 %s ",                   "pacman -Qqe | wc -l"                       },
+	{ battery_perc,               "󰇝 󰂎 %3s%% ",                "BAT1"                                      },  
+	{ datetime,                   "󰇝 %s 󰇝",                    "󰸗 %a %d/%m/%y 󰇝 󰅐 %R"                      },
         /*                            EOS                                                                      */
 };
