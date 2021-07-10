@@ -68,8 +68,7 @@ static const char unknown_str[] = "n/a";
 static const struct arg args[] = {
 	/* function                   format                       argument */
 	/*                            first bar                                                                */
-	{ username,                   "󰇝 󰀓 %s ",                   NULL                                        },
-	{ run_command,                "󰇝 󰏕 %s 󰇝",                  "pacman -Qu | wc -l"                        },
+	{ username,                   "󰇝 󰀓 %s 󰇝",                  NULL                                        },
 	/*                            status separator                                                         */
 	{ separator,                  " %s",                       ";"                                         },
 	/*                            second bar (left part)                                                   */
