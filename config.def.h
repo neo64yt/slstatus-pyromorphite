@@ -68,7 +68,8 @@ static const char unknown_str[] = "n/a";
 static const struct arg args[] = {
 	/* function                   format                       argument */
 	/*                            first bar                                                                */
-	{ username,                   "󰇝 󰀓 %s 󰇝",                 NULL                                        },
+	{ username,                   "󰇝 󰀓 %s ",                   NULL                                        },
+	{ run_command,                "󰇝 󰏕 %s 󰇝",                  "pacman -Qu | wc -l"                        },
 	/*                            status separator                                                         */
 	{ separator,                  " %s",                       ";"                                         },
 	/*                            second bar (left part)                                                   */
@@ -79,7 +80,7 @@ static const struct arg args[] = {
 	{ ram_perc,                   "󰇝 󰍛 %3s%% ",                NULL                                        },
 	/*                            second bar (right part)                                                  */
 	{ disk_perc,                  "󰇝 󰋊 %2s%% ",                "/"                                         },
-	{ run_command,                "󰇝 󰏗 %s ",                   "pacman -Qqe | wc -l"                       },
+	{ run_command,                "󰇝 󰏓 %3s ",                  "pacman -Qe | wc -l"                        },
 	{ battery_perc,               "󰇝 󰂎 %3s%% ",                "BAT1"                                      },  
 	{ datetime,                   "󰇝 %s 󰇝",                    "󰸗 %a %d/%m/%y 󰇝 󰅐 %R"                      },
         /*                            EOS                                                                      */
