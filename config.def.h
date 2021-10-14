@@ -66,21 +66,8 @@ static const char unknown_str[] = "n/a";
 
 /* NOTE: The ";" separator used below is intended to be used with my specific build of dwm or dwm with extrabar patch. */
 static const struct arg args[] = {
-	/* function                   format                       argument */
-	/*                            first bar                                                                */
-	{ username,                   "󰇝 󰀓 %s 󰇝",                  NULL                                        },
-	/*                            status separator                                                         */
-	{ separator,                  " %s",                       ";"                                         },
-	/*                            second bar (left part)                                                   */
-	{ hostname,                   "󰇝 󰌢 %s ",                   NULL                                        },
-	{ kernel_release,             "󰇝 󰌽 %s ",                   NULL                                        },
-	{ cpu_perc,                   "󰇝 󰘚 %3s%% ",                NULL                                        },
-	{ temp,                       "󰇝 󰔏 %2s C ",                "/sys/class/thermal/thermal_zone0/temp"     },
-	{ ram_perc,                   "󰇝 󰍛 %3s%% ",                NULL                                        },
-	/*                            second bar (right part)                                                  */
-	{ disk_perc,                  "󰇝 󰋊 %2s%% ",                "/"                                         },
-	{ run_command,                "󰇝 󰏓 %3s ",                  "pacman -Qe | wc -l"                        },
-	{ battery_perc,               "󰇝 󰂎 %3s%% ",                "BAT1"                                      },  
-	{ datetime,                   "󰇝 %s 󰇝",                    "󰸗 %a %d/%m/%y 󰇝 󰅐 %R"                      },
-        /*                            EOS                                                                      */
+	/* function                   format                       argument */ 
+	{ datetime,                   " %s |",                    "󰸗 %a %d/%m"                      },  // Day & date 
+	{ datetime,                   " %s ",                     "󰅐 %R"                            },  // Clock
+
 };
