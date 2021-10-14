@@ -66,7 +66,8 @@ static const char unknown_str[] = "n/a";
 
 /* NOTE: The ";" separator used below is intended to be used with my specific build of dwm or dwm with extrabar patch. */
 static const struct arg args[] = {
-	/* function                   format                       argument */ 
+	/* function                   format                       argument */
+	{ keymap,                     "| 󰥻 %s ",                   NULL,                             },  // Keyboard layout indicator
 	{ datetime,                   "| %s |",                    "󰸗 %a %d/%m"                      },  // Day & date 
 	{ datetime,                   " %s |",                     "󰅐 %R"                            },  // Clock
 
