@@ -59,10 +59,16 @@ install: all
 	mkdir -p "$(DESTDIR)$(PREFIX)/bin"
 	cp -f slstatus "$(DESTDIR)$(PREFIX)/bin"
 	chmod 755 "$(DESTDIR)$(PREFIX)/bin/slstatus"
+	cp -f wp_vol "$(DESTDIR)$(PREFIX)/bin"
+	chmod 755 "$(DESTDIR)$(PREFIX)/bin/wp_vol"
+	cp -f screenbr "$(DESTDIR)$(PREFIX)/bin"
+	chmod 755 "$(DESTDIR)$(PREFIX)/bin/screenbr"
 	mkdir -p "$(DESTDIR)$(MANPREFIX)/man1"
 	cp -f slstatus.1 "$(DESTDIR)$(MANPREFIX)/man1"
 	chmod 644 "$(DESTDIR)$(MANPREFIX)/man1/slstatus.1"
 
 uninstall:
 	rm -f "$(DESTDIR)$(PREFIX)/bin/slstatus"
+	rm -f "$(DESTDIR)$(PREFIX)/bin/wp_vol"
+	rm -f "$(DESTDIR)$(PREFIX)/bin/screenbr"
 	rm -f "$(DESTDIR)$(MANPREFIX)/man1/slstatus.1"

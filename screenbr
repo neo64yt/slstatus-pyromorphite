@@ -1,0 +1,18 @@
+#!/bin/sh
+
+get_brightness() {
+    brightnessctl get | awk '{print int($1/255*100)}'
+}
+
+brightness="$(get_brightness)"
+
+if [ "$brightness" -lt 50 ]; then
+    icon="󰃠"
+elif [ "$brightness" -ge 50 ] && [ "$brightness" -lt 80 ]; then
+    icon="󰃟"
+else
+    icon="󰃞"
+fi
+
+echo "$icon $brightness%"
+

@@ -64,11 +64,14 @@ static const char unknown_str[] = "n/a";
  * wifi_essid          WiFi ESSID                      interface name (wlan0)
  */
 
-/* NOTE: The ";" separator used below is intended to be used with my specific build of dwm or dwm with extrabar patch. */
 static const struct arg args[] = {
 	/* function                   format                       argument */
-	{ keymap,                     "| 󰥻 %s ",                   NULL,                             },  // Keyboard layout indicator
-	{ datetime,                   "| %s |",                    "󰸗 %a %d/%m"                      },  // Day & date 
-	{ datetime,                   " %s |",                     "󰅐 %R"                            },  // Clock
+    { run_command,                "[%s]",                     "wp_vol"                                },  // Volume (wireplumber)
+    { run_command,                "[%s]",                     "screenbr"                              },  // Screen brightness
+	{ battery_perc,               "[󰁹 %s%%]",                 "BAT1"                                  },  // Battery 
+    { cpu_perc,                   "[󰘚 %s%%]",                 NULL                                    },  // CPU
+    { temp,                       "[󰔏 %s°C]",                 "/sys/class/thermal/thermal_zone0/temp" },  // Temperature
+	{ datetime,                   "[%s]",                     "󰸗 %a, %d/%m"                           },  // Day & date 
+	{ datetime,                   "[%s]",                     "󰅐 %R"                                  },  // Clock
 
 };
